@@ -1,0 +1,32 @@
+
+##
+# Override built-in defaults
+##
+Defaults always_set_home
+Defaults secure_path="/opt/python/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Defaults env_reset
+Defaults env_keep += "http_proxy https_proxy no_proxy"
+
+##
+# Cmnd alias specification
+##
+Cmnd_Alias	PIP = /opt/python/bin/pip2.7,\
+                      /opt/python/bin/pip3.2,\
+                      /opt/python/bin/pip3.3,\
+                      /opt/python/bin/pip3.4,\
+                      /opt/python/bin/pip3.5,\
+                      /opt/python/bin/pip3.6,\
+                      /opt/python/bin/pip3.7,\
+                      /opt/python/bin/pip3.8
+Cmnd_Alias	PKGS = /usr/bin/zypper, /bin/rpm
+
+##
+# User specification
+##
+
+# root and users in group wheel can run anything on any machine as any user
+root		ALL = (ALL) ALL
+%wheel		ALL = (ALL) ALL
+
+# abuild is allowed to install additional packages
+abuild		ALL = NOPASSWD: PIP, PKGS
