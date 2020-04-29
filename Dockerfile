@@ -6,6 +6,7 @@ RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/h
     zypper --non-interactive install \
         glibc-locale \
         less \
+        opt-python-libpython3-3.8.2 \
         opt-python27 \
         opt-python27-PyYAML \
         opt-python27-lxml \
@@ -41,6 +42,11 @@ RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/h
         opt-python38-lxml \
         opt-python38-pip \
         opt-python38-setuptools \
+        opt-python39 \
+        opt-python39-PyYAML \
+        opt-python39-lxml \
+        opt-python39-pip \
+        opt-python39-setuptools \
         patch \
         sudo \
         tar && \
