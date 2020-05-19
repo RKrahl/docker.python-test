@@ -6,7 +6,7 @@ RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/h
     zypper --non-interactive install \
         glibc-locale \
         less \
-        opt-python-libpython3-3.8.2 \
+        'opt-python-libpython3 < 3.9' \
         opt-python27 \
         opt-python27-PyYAML \
         opt-python27-lxml \
