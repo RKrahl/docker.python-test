@@ -11,14 +11,11 @@ Defaults env_keep += "http_proxy https_proxy no_proxy"
 # Cmnd alias specification
 ##
 Cmnd_Alias	PIP = /opt/python/bin/pip2.7,\
-                      /opt/python/bin/pip3.2,\
-                      /opt/python/bin/pip3.3,\
-                      /opt/python/bin/pip3.4,\
-                      /opt/python/bin/pip3.5,\
                       /opt/python/bin/pip3.6,\
                       /opt/python/bin/pip3.7,\
                       /opt/python/bin/pip3.8,\
-                      /opt/python/bin/pip3.9
+                      /opt/python/bin/pip3.9,\
+                      /opt/python/bin/pip3.10
 Cmnd_Alias	PKGS = /usr/bin/zypper, /bin/rpm
 
 ##

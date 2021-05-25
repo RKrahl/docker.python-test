@@ -1,6 +1,6 @@
-FROM rkrahl/opensuse:42.3
+FROM rkrahl/opensuse:15.2
 
-RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/home:/Rotkraut:/Opt-Python/openSUSE_Leap_42.3/home:Rotkraut:Opt-Python.repo && \
+RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/home:/Rotkraut:/Opt-Python/openSUSE_Leap_15.2/home:Rotkraut:Opt-Python.repo && \
     zypper --non-interactive modifyrepo --refresh home_Rotkraut_Opt-Python && \
     zypper --non-interactive --gpg-auto-import-keys refresh home_Rotkraut_Opt-Python && \
     zypper --non-interactive install \
@@ -11,21 +11,6 @@ RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/h
         opt-python27-lxml \
         opt-python27-pip \
         opt-python27-setuptools \
-        opt-python33 \
-        opt-python33-PyYAML \
-        opt-python33-lxml \
-        opt-python33-pip \
-        opt-python33-setuptools \
-        opt-python34 \
-        opt-python34-PyYAML \
-        opt-python34-lxml \
-        opt-python34-pip \
-        opt-python34-setuptools \
-        opt-python35 \
-        opt-python35-PyYAML \
-        opt-python35-lxml \
-        opt-python35-pip \
-        opt-python35-setuptools \
         opt-python36 \
         opt-python36-PyYAML \
         opt-python36-lxml \
@@ -46,6 +31,11 @@ RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/h
         opt-python39-lxml \
         opt-python39-pip \
         opt-python39-setuptools \
+        opt-python310 \
+        opt-python310-PyYAML \
+        opt-python310-lxml \
+        opt-python310-pip \
+        opt-python310-setuptools \
         patch \
         sudo \
         tar && \
