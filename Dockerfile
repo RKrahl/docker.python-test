@@ -5,6 +5,7 @@ RUN zypper --non-interactive addrepo http://download.opensuse.org/repositories/h
     zypper --non-interactive --gpg-auto-import-keys refresh home_Rotkraut_Opt-Python && \
     zypper --non-interactive install \
         glibc-locale \
+        gzip \
         less \
         opt-python27 \
         opt-python27-PyYAML \
