@@ -1,0 +1,12 @@
+#! /bin/bash
+
+WORKDIR=$HOME/test
+PYTHON=${1:-python3.9}
+DIST=${2:-$(basename $WORKDIR/*.tar.gz)}
+DISTDIR=${DIST%%.tar.gz}
+
+cd $WORKDIR
+rm -rf $DISTDIR
+tar xfz $DIST
+cd $DISTDIR
+$PYTHON setup.py test
