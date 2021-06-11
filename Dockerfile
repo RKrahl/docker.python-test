@@ -46,9 +46,12 @@ RUN groupadd abuild && \
     useradd -g abuild -c "Build user" -d /home/abuild abuild && \
     mkdir -p /home/abuild/bin
 COPY bashrc /home/abuild/.bashrc
-COPY allpip /home/abuild/bin
+COPY allpip run-test run-test-all /home/abuild/bin/
 RUN chown -R abuild:abuild /home/abuild && \
-    chmod a+x /home/abuild/bin/allpip
+    chmod a+x \
+	  /home/abuild/bin/allpip \
+	  /home/abuild/bin/run-test \
+	  /home/abuild/bin/run-test-all
 
 COPY sudoers /etc/sudoers
 
