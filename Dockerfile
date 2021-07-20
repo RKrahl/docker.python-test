@@ -56,6 +56,7 @@ RUN groupadd abuild && \
     mkdir -p /home/abuild/bin
 COPY bashrc /home/abuild/.bashrc
 COPY allpip /home/abuild/bin
+COPY prereq /home/abuild/.pytest-prereq
 RUN chown -R abuild:abuild /home/abuild && \
     chmod a+x /home/abuild/bin/allpip
 
@@ -65,6 +66,6 @@ USER abuild
 WORKDIR /home/abuild
 ENV PATH /home/abuild/bin:/opt/python/bin:/usr/local/bin:/usr/bin:/bin
 
-RUN allpip install pytest
+RUN allpip install -r .pytest-prereq
 
 CMD ["bash"]
