@@ -1,7 +1,7 @@
 #! /bin/bash
 
 WORKDIR=$HOME/test
-PYTHON=${1:-python3.9}
+PYTHON=${1:-python3.10}
 DIST=${2:-$(basename $WORKDIR/*.tar.gz)}
 DISTDIR=${DIST%%.tar.gz}
 
