@@ -1,8 +1,8 @@
-FROM rkrahl/opensuse:15.4
+FROM rkrahl/opensuse:15.5
 
 RUN zypper --non-interactive refresh
 
-RUN zypper --non-interactive addrepo https://download.opensuse.org/repositories/home:/Rotkraut:/Opt-Python/15.4/home:Rotkraut:Opt-Python.repo && \
+RUN zypper --non-interactive addrepo https://download.opensuse.org/repositories/home:/Rotkraut:/Opt-Python/15.5/home:Rotkraut:Opt-Python.repo && \
     zypper --non-interactive modifyrepo --refresh home_Rotkraut_Opt-Python && \
     zypper --non-interactive --gpg-auto-import-keys refresh home_Rotkraut_Opt-Python && \
     zypper --non-interactive install \
