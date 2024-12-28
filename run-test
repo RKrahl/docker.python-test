@@ -1,12 +1,14 @@
 #! /bin/bash
 
-WORKDIR=$HOME/test
-PYTHON=${1:-python3.12}
-DIST=${2:-$(basename $WORKDIR/*.tar.gz)}
-DISTDIR=${DIST%%.tar.gz}
+. $HOME/.env
 
 cd $WORKDIR
 rm -rf $DISTDIR
 tar xfz $DIST
 cd $DISTDIR
-$PYTHON setup.py test
+if test -n "$TESTARGS"
+then
+    $PYTHON setup.py test --test-args="$TESTARGS"
+else
+    $PYTHON setup.py test
+fi

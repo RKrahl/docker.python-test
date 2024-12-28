@@ -62,6 +62,7 @@ RUN groupadd abuild && \
     useradd -g abuild -c "Build user" -d /home/abuild abuild && \
     mkdir -p /home/abuild/bin
 COPY bashrc /home/abuild/.bashrc
+COPY env /home/abuild/.env
 COPY allpip run-test run-test-all /home/abuild/bin/
 RUN chown -R abuild:abuild /home/abuild && \
     chmod a+x \

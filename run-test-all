@@ -1,8 +1,6 @@
 #! /bin/bash
 
-WORKDIR=$HOME/test
-DIST=${1:-$(basename $WORKDIR/*.tar.gz)}
-DISTDIR=${DIST%%.tar.gz}
+. $HOME/.env
 
 for v in 3.6 3.7 3.8 3.9 3.10 3.11 3.12 3.13
 do
@@ -11,5 +9,10 @@ do
     rm -rf $DISTDIR
     tar xfz $DIST
     cd $DISTDIR
-    $PYTHON setup.py test
+    if test -n "$TESTARGS"
+    then
+	$PYTHON setup.py test --test-args="$TESTARGS"
+    else
+	$PYTHON setup.py test
+    fi
 done
