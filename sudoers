@@ -18,7 +18,8 @@ Cmnd_Alias	PIP = /opt/python/bin/pip2.7,\
                       /opt/python/bin/pip3.10,\
                       /opt/python/bin/pip3.11,\
                       /opt/python/bin/pip3.12,\
-                      /opt/python/bin/pip3.13
+                      /opt/python/bin/pip3.13,\
+                      /opt/python/bin/pip3.14
 Cmnd_Alias	PKGS = /usr/bin/zypper, /usr/bin/rpm
 
 ##

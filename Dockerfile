@@ -53,6 +53,11 @@ RUN zypper --non-interactive addrepo https://download.opensuse.org/repositories/
         opt-python313-lxml \
         opt-python313-pip \
         opt-python313-setuptools \
+        opt-python314 \
+        opt-python314-PyYAML \
+        opt-python314-lxml \
+        opt-python314-pip \
+        opt-python314-setuptools \
         patch \
         sudo \
         tar && \
