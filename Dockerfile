@@ -81,6 +81,6 @@ USER abuild
 WORKDIR /home/abuild
 ENV PATH /home/abuild/bin:/opt/python/bin:/usr/local/bin:/usr/bin:/bin
 
-RUN allpip install pytest
+RUN allpip install distutils-pytest pytest
 
 CMD ["bash"]
