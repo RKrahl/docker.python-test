@@ -1,2 +1,3 @@
 attrs <=19.3.0 ; python_version == '3.4'
+distutils-pytest
 pytest
