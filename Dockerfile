@@ -79,7 +79,7 @@ COPY sudoers /etc/sudoers
 
 USER abuild
 WORKDIR /home/abuild
-ENV PATH /home/abuild/bin:/opt/python/bin:/usr/local/bin:/usr/bin:/bin
+ENV PATH=/home/abuild/bin:/opt/python/bin:/usr/local/bin:/usr/bin:/bin
 
 RUN allpip install distutils-pytest pytest
 
